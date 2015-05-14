@@ -1,13 +1,13 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 $fa-font-path: "/bower_components/font-awesome/fonts";
 $green: #6EF4AB;
+$light-green: #e2fcee;
+$dark-green: #58c388;
 $light-pink: #F8BCBC;
 $pink: #E75C83;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
-@import 'home/home.scss';
-@import 'create/existing/existing.scss';
 
 /**
  * App-wide Styles
