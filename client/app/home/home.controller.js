@@ -2,10 +2,18 @@
 
 angular.module('cakepopsApp')
   .controller('HomeCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [];
+    var vm = this;
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
-    });
-
+    vm.slides = [
+      {
+        title: 'Create a pop!',
+        image: 'assets/images/home/pops_background.jpg',
+        link: 'design'
+      },
+      {
+        title: 'Choose a pre-existing design!',
+        image: 'assets/images/home/pops_background.jpg',
+        link: 'existing'
+      }
+    ];
   });
