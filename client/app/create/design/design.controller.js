@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cakepopsApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('DesignCtrl', function ($scope, $http) {
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
