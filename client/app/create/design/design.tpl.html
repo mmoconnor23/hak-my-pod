@@ -1,28 +1,22 @@
-<div id="container">Design
-	<header></header>
-	<main>
-		<section class="left-half">
-			
-			canvas!!
+<main>	
+	<section class="left-half">
+		
+		canvas!!
 
-		</section>
-		<section class="right-half spacing">
-			<h4> Pick a color! </h4> 
-			<color-picker ng-model="myColor"
-			ng-model="color"
-    		color-picker-format="rgb"
-    		color-picker-alpha="yes"
-    		color-picker-swatch="yes"
-    		color-picker-swatch-pos="left"
-    		color-picker-case="lower"
-    		color-picker-swatch-only="no">
-			</color-picker>
-			<br>
-			<button type="button" class="btn btn-primary" ng-model="singleModel"> Add Sprinklers! </button>
-			<br><br>
-			<button popover-template="dynamicPopoverText.templateUrl" popover-placement="right" popover-title="{{dynamicPopoverText.title}}" class="btn btn-primary">Add Text!</button>
-			<br><br>
-			<button popover-template="dynamicPopoverShape.templateUrl" popover-placement="right" popover-title="{{dynamicPopoverShape.title}}" class="btn btn-primary"> Add Shapes! </button>
-		</section>
-	</main>
-</div>
+	</section>
+	<section class="right-half spacing">
+		<h4> Pick a color for your cake-pop! </h4> 
+		<color-picker ng-model="myColor"
+		ng-model="color"
+		color-picker-format="rgb"
+		color-picker-swatch-pos="right"
+		color-picker-swatch-only="true">
+		</color-picker>
+		<br>
+		<button popover-template="dynamicPopoverSprinklers.templateUrl" popover-placement="right" class="btn btn-primary color-override">Add Sprinklers!</button>
+		<br><br>
+		<button popover-template="dynamicPopoverText.templateUrl" popover-placement="right" popover-title="{{dynamicPopoverText.title}}" class="btn btn-primary color-override">Add Text!</button>
+		<br><br>
+		<button popover-template="dynamicPopoverShapes.templateUrl" popover-placement="right"  class="btn btn-primary color-override"> Add Shapes! </button>
+	</section>
+</main>

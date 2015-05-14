@@ -22,7 +22,6 @@ $pink: #E75C83;
     color: #000;
     padding: 0.2em 0;
 }
-<<<<<<< HEAD
 
 body {
   background-image: url('../assets/images/home/light_sprinkles.jpg');
@@ -65,8 +64,8 @@ body {
 }
 // Component styles are injected through grunt
 // injector
+@import 'create/design/design.scss';
 @import 'create/existing/existing.scss';
 @import 'home/home.scss';
-@import 'create/design/design.scss';
 @import 'modal/modal.scss';
 // endinjector

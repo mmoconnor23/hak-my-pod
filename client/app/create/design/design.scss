@@ -1,5 +1,6 @@
 main {
     height: 100%;
+    z-index: 2;
 }
 .left-half {
 	float: left;
@@ -19,9 +20,13 @@ main {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-.container {
-	opacity: 1.0;
+
+.color-override {
+ 	background-color: $pink !important;
+ 	border-color: $pink !important;
 }
-.btn-primary {
- 	color: $green;
+
+.align-left {
+	float: left !important;
+	text-align: left !important;
 }
