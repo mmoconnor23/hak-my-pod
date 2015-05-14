@@ -7,7 +7,7 @@
 
 		</section>
 		<section class="right-half spacing">
-			<h4> Pick a color! </h4>
+			<h4> Pick a color! </h4> 
 			<color-picker ng-model="myColor"
 			ng-model="color"
     		color-picker-format="rgb"
@@ -20,7 +20,9 @@
 			<br>
 			<button type="button" class="btn btn-primary" ng-model="singleModel"> Add Sprinklers! </button>
 			<br><br>
-			<button popover-template="dynamicPopover.templateUrl" popover-placement="right" popover-title="{{dynamicPopover.title}}" class="btn btn-primary" ng-click="btnPressed()">Add Text!</button>
+			<button popover-template="dynamicPopoverText.templateUrl" popover-placement="right" popover-title="{{dynamicPopoverText.title}}" class="btn btn-primary">Add Text!</button>
+			<br><br>
+			<button popover-template="dynamicPopoverShape.templateUrl" popover-placement="right" popover-title="{{dynamicPopoverShape.title}}" class="btn btn-primary"> Add Shapes! </button>
 		</section>
 	</main>
 </div>
