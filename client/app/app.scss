@@ -3,6 +3,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
+@import 'home/home.scss';
 
 /**
  * App-wide Styles
@@ -15,7 +16,20 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     padding: 0.2em 0;
 }
 
+.background {
+  background-image: url('../assets/images/home/pops_background.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.custom-nav {
+  margin: 0px;
+}
 // Component styles are injected through grunt
 // injector
+@import 'home/home.scss';
 @import 'modal/modal.scss';
 // endinjector
