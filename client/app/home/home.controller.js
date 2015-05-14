@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cakepopsApp')
-  .controller('HomeCtrl', function ($scope, $http) {
+  .controller('HomeCtrl', function () {
     var vm = this;
 
     vm.slides = [
