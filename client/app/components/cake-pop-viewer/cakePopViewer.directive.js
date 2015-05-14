@@ -17,6 +17,8 @@
       link: function(scope, elem) {
 
         var threejsViewportContainerId = '#threejs-viewport-container',
+            activeCamera,
+            activeRenderer,
             popInstance;
 
         /*
@@ -41,11 +43,15 @@
               camera = addCamera(scene),
               viewPortContainer = getViewportContainer();
 
+          activeCamera = camera;
+          activeRenderer = renderer;
+
           if (!viewPortContainer) {
             throw new Error("CakePopViewer: Could not find viewport container. Cannot begin rendering.");
           }
 
           viewPortContainer.appendChild(renderer.domElement);
+          window.onresize = resizeViewer;
 
           var render = function() {
             requestAnimationFrame( render );
@@ -70,6 +76,21 @@
           renderer.physicallyBasedShading = true;
 
           return renderer;
+        }
+
+        /*
+         * Resize Renderer Viewport
+         * @function
+         */
+        function resizeViewer() {
+          if (activeCamera) {
+            activeCamera.aspect = window.innerWidth / window.innerHeight;
+            activeCamera.updateProjectionMatrix();
+          }
+
+          if (activeRenderer) {
+            activeRenderer.setSize( window.innerWidth * 0.95, window.innerHeight * 0.95 );
+          }
         }
 
         /*
