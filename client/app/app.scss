@@ -1,13 +1,13 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 $fa-font-path: "/bower_components/font-awesome/fonts";
 $green: #6EF4AB;
+$light-green: #e2fcee;
+$dark-green: #58c388;
 $light-pink: #F8BCBC;
 $pink: #E75C83;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
-@import 'home/home.scss';
-@import 'create/existing/existing.scss';
 
 /**
  * App-wide Styles
@@ -20,13 +20,9 @@ $pink: #E75C83;
     padding: 0.2em 0;
 }
 
-.background {
-  background-image: url('../assets/images/home/pops_background.jpg');
+body {
+  background-image: url('../assets/images/home/light_sprinkles.jpg');
   background-size: cover;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  opacity: 0.5;
 }
 
 .custom-nav {
@@ -37,6 +33,32 @@ $pink: #E75C83;
   .navbar-brand:hover {
     color: $light-pink;
   }
+}
+
+.facebook {
+  background-color: #3B5998;
+  color: white;
+  margin: 8px;
+}
+
+.facebook:hover {
+  background-color: #3B5998;
+  color: white;
+  opacity: 0.75;
+  margin: 8px;
+}
+
+.sweetBites {
+  background-color: $green;
+  color: $pink;
+  margin: 8px;
+}
+
+.sweetBites:hover {
+  background-color: $green;
+  color: $pink;
+  opacity: 0.75;
+  margin: 8px;
 }
 // Component styles are injected through grunt
 // injector
