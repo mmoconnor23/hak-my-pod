@@ -6,7 +6,8 @@ angular.module('cakepopsApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'color.picker'
+  'color.picker',
+  'cakepopsApp.components'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider

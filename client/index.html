@@ -22,7 +22,7 @@
       <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
       <!-- endinjector -->
     <!-- endbuild -->
-    
+
   </head>
   <body ng-app="cakepopsApp" ng-controller="AppCtrl as ctrl">
     <!--[if lt IE 7]>
@@ -102,10 +102,10 @@
       <!-- endbower -->
       <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
-      
+
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
-        
+
           <!-- injector:js -->
           <script src="app/app.controller.js"></script>
           <script src="app/create/design/design.controller.js"></script>
@@ -114,6 +114,15 @@
           <script src="app/create/existing/existing.js"></script>
           <script src="app/home/home.controller.js"></script>
           <script src="app/home/home.js"></script>
+          <script src="app/components/cake-pop-viewer/_components.js"></script>
+          <script src="app/components/cake-pop-viewer/cakePopViewer.controller.js"></script>
+          <script src="app/components/cake-pop-viewer/cakePopViewer.directive.js"></script>
+          <script src="app/components/cake-pop-viewer/threejs.service.js"></script>
+          <script src="app/main/client/bower_components/three.js"></script>
+          <script src="app/main/client/bower_components/three.js/three.js"></script>
+          <script src="app/main/client/bower_components/three.js/three.min.js"></script>
+          <script src="app/main/main.controller.js"></script>
+          <script src="app/main/main.js"></script>
           <script src="components/modal/modal.service.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
