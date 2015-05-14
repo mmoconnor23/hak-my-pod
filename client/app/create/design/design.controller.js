@@ -1,11 +1,15 @@
 'use strict';
 
 angular.module('cakepopsApp')
-  .controller('DesignCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [];
+  .controller('DesignCtrl', function ($scope) {
+  	$scope.myColor = '';
+  	$scope.dynamicPopover = {
+    templateUrl: 'app/create/design/myPopoverTemplate.html',
+    title: 'Enter your Text!'
+  };
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
-    });
+  	$scope.btnPressed = function() {
+  		console.log('hi');
+  	}
 
   });

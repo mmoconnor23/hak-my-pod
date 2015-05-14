@@ -8,6 +8,9 @@ $pink: #E75C83;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
+@import 'home/home.scss';
+@import 'create/existing/existing.scss';
+@import 'create/design/design.scss';
 
 /**
  * App-wide Styles
@@ -19,12 +22,12 @@ $pink: #E75C83;
     color: #000;
     padding: 0.2em 0;
 }
+<<<<<<< HEAD
 
 body {
   background-image: url('../assets/images/home/light_sprinkles.jpg');
   background-size: cover;
 }
-
 .custom-nav {
   margin: 0px;
   .navbar-brand {
@@ -64,5 +67,6 @@ body {
 // injector
 @import 'create/existing/existing.scss';
 @import 'home/home.scss';
+@import 'create/design/design.scss';
 @import 'modal/modal.scss';
 // endinjector

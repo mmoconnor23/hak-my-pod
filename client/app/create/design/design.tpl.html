@@ -1,1 +1,26 @@
-<div>Design</div>
+<div id="container">Design
+	<header></header>
+	<main>
+		<section class="left-half">
+			
+			canvas!!
+
+		</section>
+		<section class="right-half spacing">
+			<h4> Pick a color! </h4>
+			<color-picker ng-model="myColor"
+			ng-model="color"
+    		color-picker-format="rgb"
+    		color-picker-alpha="yes"
+    		color-picker-swatch="yes"
+    		color-picker-swatch-pos="left"
+    		color-picker-case="lower"
+    		color-picker-swatch-only="no">
+			</color-picker>
+			<br>
+			<button type="button" class="btn btn-primary" ng-model="singleModel"> Add Sprinklers! </button>
+			<br><br>
+			<button popover-template="dynamicPopover.templateUrl" popover-placement="right" popover-title="{{dynamicPopover.title}}" class="btn btn-primary" ng-click="btnPressed()">Add Text!</button>
+		</section>
+	</main>
+</div>
