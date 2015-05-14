@@ -1,5 +1,8 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 $fa-font-path: "/bower_components/font-awesome/fonts";
+$green: #6EF4AB;
+$light-pink: #F8BCBC;
+$pink: #E75C83;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
@@ -27,6 +30,12 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 .custom-nav {
   margin: 0px;
+  .navbar-brand {
+    color: $pink;
+  }
+  .navbar-brand:hover {
+    color: $light-pink;
+  }
 }
 // Component styles are injected through grunt
 // injector
