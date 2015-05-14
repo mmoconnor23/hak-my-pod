@@ -5,6 +5,27 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
   width: 70%;
+  height: 70%
+}
 
-  
+.carousel-bar {
+  background-color: lightpink;
+  opacity: 0.9;
+  position: absolute;
+  border-radius: 14px;
+
+  button {
+    background-color: $light-green;
+    color: $pink;
+    border-color: $pink;
+    margin: 8px;
+  }
+
+  button:hover {
+    opacity: 0.8;
+    background-color: $light-green;
+    color: $pink;
+    border-color: $pink;
+    margin: 8px;
+  }
 }
