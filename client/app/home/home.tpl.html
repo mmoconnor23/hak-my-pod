@@ -1,11 +1,9 @@
-<!--<div>HOME</div>-->
-<!--<a ui-sref="design">Create&Design</a>-->
 <div ng-controller="HomeCtrl as ctrl">
-  <div>
-    <carousel interval="5000" class="pop-carousel">
+  <div class="pop-carousel">
+    <carousel interval="0">
       <slide ng-repeat="slide in ctrl.slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
-        <div class="carousel-caption">
+        <img ng-src="{{slide.image}}" style="margin:auto">
+        <div class="carousel-caption carousel-bar">
           <h4>{{slide.title}}</h4>
           <button type="button"
                   class="btn btn-primary"
@@ -20,7 +18,4 @@
       </slide>
     </carousel>
   </div>
-
-  FACEBOOK
-  WEBSITE
 </div>

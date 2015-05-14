@@ -21,12 +21,12 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="cakepopsApp">
+  <body ng-app="cakepopsApp" ng-controller="AppCtrl as ctrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav class="navbar navbar-default custom-nav">
+    <nav class="navbar navbar-default navbar-fixed-top custom-nav">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -39,7 +39,7 @@
           </button>
           <img src="assets/images/home/sweet_bites_transparent.gif" style="height:45px; width:45px"/>
 
-          <a class="navbar-brand" href="#">Design-A-Pop</a>
+          <a class="navbar-brand" ui-sref="home">Design-A-Pop</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,21 +48,23 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="https://www.facebook.com/sweetbitesbyval/timeline">
-                Facebook
-              </a>
+                <button type="button"
+                        class="btn btn-default navbar-btn facebook"
+                        ng-click="ctrl.openLink('facebook')">
+                  <b>Facebook</b>
+                </button>
             </li>
             <li>
-              <a href="https://www.weebly.com">
-                Website
-              </a>
+                <button type="button"
+                        class="btn btn-default navbar-btn sweetBites"
+                        ng-click="ctrl.openLink('sweetBites')">
+                  <b>Sweet Bites by Val</b>
+                </button>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
-    <div class="background"></div>
 
     <!-- Add your site or application content here -->
     <div ui-view=""></div>
@@ -93,11 +95,13 @@
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
       <!-- endbower -->
+      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
 
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/app.controller.js"></script>
           <script src="app/create/design/design.controller.js"></script>
           <script src="app/create/design/design.js"></script>
           <script src="app/create/existing/existing.controller.js"></script>
