@@ -11,9 +11,13 @@
       templateUrl: 'app/components/cake-pop-viewer/cakePopViewer.tpl.html',
       controller: 'cakePopViewerController',
       controllerAs: 'cakePopViewCtrl',
+      scope: {
+        color: '='
+      },
       link: function(scope, elem) {
 
-        var threejsViewportContainerId = '#threejs-viewport-container';
+        var threejsViewportContainerId = '#threejs-viewport-container',
+            popInstance;
 
         /*
          * Get ViewPort Container DOM Element
@@ -58,13 +62,11 @@
          * @returns {object}} - Three.js renderer
          */
         function getRenderer() {
-          var renderer = new threejs.WebGLRenderer({ antialias: true });
+          var renderer = new threejs.WebGLRenderer();
 
-          renderer.setSize( window.innerWidth, window.innerHeight );
+          renderer.setSize( window.innerWidth * 0.95, window.innerHeight * 0.95 );
           renderer.setClearColor(0xffffff, 1);
           renderer.shadowMapEnabled = true;
-          renderer.shadowMapSoft = true;
-          renderer.shadowMapType = threejs.PCFSoftShadowMap;
           renderer.physicallyBasedShading = true;
 
           return renderer;
@@ -80,7 +82,7 @@
 
           // Set up Environment
           addLighting(scene);
-          addFloor(scene);
+          //addFloor(scene);
           addPop(scene);
 
           return scene;
@@ -92,8 +94,12 @@
          * @param {object} scene - Three.js scene to add lighting to
          */
         function addLighting(scene) {
-          // Initialize Light
-          var light = new threejs.DirectionalLight( 0xFFFFFF );
+          // Initialize Ambient Light
+          var ambient = new threejs.AmbientLight( 0xB0B0B0 ); // soft white light
+          scene.add( ambient );
+
+          // Initialize Direrctional Light
+          var light = new threejs.DirectionalLight( 0xD0D0D0, 0.60 );
           light.position.set( 30, 80, 30 );
           light.target.position.copy( scene.position );
           light.castShadow = true;
@@ -112,11 +118,17 @@
         function addCamera(scene) {
           var camera = new threejs.PerspectiveCamera(
             65, window.innerWidth / window.innerHeight, 1, 1000
-          );
+            ),
+            rotation = new THREE.OrbitControls( camera );
+
+          // Set Up Camera Mouse Controls
+          rotation.target.set( 0, 35, 0 );
+          rotation.noPan = true;
+
           camera.position.set( 50, 60, 0 );
           camera.lookAt({
             x: scene.position.x,
-            y: scene.position.y + 20,
+            y: scene.position.y + 35,
             z: scene.position.z
           });
 
@@ -134,17 +146,15 @@
         function addPop(scene) {
           var universalGeometry = new threejs.Geometry(),
             pop = new threejs.Mesh(
-            new threejs.SphereGeometry( 5, 32, 32 ),
-            new threejs.MeshLambertMaterial({
-              color: 0x00ff00
-            })),
+              new threejs.SphereGeometry( 5, 32, 32 ),
+              getPopMaterial()
+            ),
             stick = new threejs.Mesh(
               new threejs.CylinderGeometry( 0.5, 0.5, 20, 32, 32 ),
               new threejs.MeshLambertMaterial({
                 color: 0xFFFFFF
               })
-            ),
-            cakePop;
+            );
 
           pop.position.set( 0, 35, 0 );
           pop.castShadow = true;
@@ -156,28 +166,37 @@
           scene.add( pop );
           scene.add( stick );
 
+          popInstance = pop;
+
           return pop;
         }
 
-        /*
-         * Create Floor Plane in Scene
-         * @function
-         * @param {object} scene - Scene to add floor plane to
-         * @return {object} - Floor Plane object added to scene
-         */
-        function addFloor(scene) {
-          var ground = new threejs.Mesh(
-            new threejs.BoxGeometry(50, 1, 60),
-            new threejs.MeshLambertMaterial({
-              color: 0xffffff
-            }));
-          ground.position.set( 0, 5, 0 );
-          ground.receiveShadow = true;
+        function updatePopColor() {
+          if (!popInstance) {
+            return;
+          }
 
-          scene.add( ground );
+          popInstance.material = getPopMaterial(scope.color);
+        }
+
+        /*
+         * Get Material for Pop Geometry with given Color
+         * @function
+         * @param {object} color - Color to use in new Material
+         */
+        function getPopMaterial(color) {
+          return new threejs.MeshPhongMaterial({
+              color: color || 0x856300,
+              shininess: 25
+          });
         }
 
         init();
+
+        // Update the color of the pop when changed externally
+        scope.$watch(function() {
+          return scope.color;
+        }, updatePopColor);
       }
 
     };
