@@ -1,8 +1,8 @@
-<h2 style="text-align: center; font-weight:bold">Choose an existing design</h2> 
+<h2 id="existing_designs">Choose an existing design</h2> 
 
-<div class="cakepop-main" style="position:absolute;left:10%">
-   <div ng-repeat="img in imageList" style="display:inline-block;">
-   		<img style="height:300px;width:300px; padding:20px" ng-src="{{img}}"></img>
+<div class="cakepop-main">
+   <div class="cakepop-image" ng-repeat="img in imageList">
+   		<img ng-src="{{img}}"></img>
    </div>
 
 </div>
