@@ -50,6 +50,11 @@
             throw new Error("CakePopViewer: Could not find viewport container. Cannot begin rendering.");
           }
 
+          if (scope.cakePopViewCtrl) {
+            scope.cakePopViewCtrl.setScene(scene);
+            scope.cakePopViewCtrl.setPop(popInstance);
+          }
+
           viewPortContainer.appendChild(renderer.domElement);
           window.onresize = resizeViewer;
 

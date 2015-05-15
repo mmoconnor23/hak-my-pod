@@ -1,3 +1,18 @@
 <div>
-  <cake-pop-viewer></cake-pop-viewer>
+  <div class="well pull-right">
+    <div class="btn-group">
+      <button class="btn btn-primary" ng-click="setRed()">Red</button>
+      <button class="btn btn-primary" ng-click="setBlue()">Blue</button>
+      <button class="btn btn-primary" ng-click="setGreen()">Green</button>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-primary">Add Sprinkles</button>
+      <button class="btn btn-primary">Remove Sprinkles</button>
+    </div>
+  </div>
+  <cake-pop-viewer color="color"
+                   cake-pop-sprinkles
+                   sprinkle-color="sprinkles.color"
+                   sprinkle-count="sprinkles.count">
+  </cake-pop-viewer>
 </div>
