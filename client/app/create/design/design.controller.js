@@ -13,5 +13,5 @@ angular.module('cakepopsApp')
     };
     $scope.dynamicPopoverSprinklers = {
     templateUrl: 'app/create/design/PopoverTemplateSprinklers.html',   
-    }
+    };
   });

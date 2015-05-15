@@ -1,7 +1,7 @@
 'use strict'; 
 
 angular.module('cakepopsApp')
-  .controller('ExistingCtrl', function ($scope, $http) {
+  .controller('ExistingCtrl', function ($scope) {
 
 	var imageList = ['batman', 'bow', 'choc_chip', 'crystal', 'cupcake', 'eiffeltower', 'fifty', 
 	'flower', 'football', 'fox', 'ghosts', 'girls', 'halloween', 'kiss', 'love', 
@@ -16,7 +16,7 @@ angular.module('cakepopsApp')
 		return {
 			imageUrl: image[0],
 			imageName: image[1]
-		}
+		};
   	});
 
   	console.log($scope.imageList);
