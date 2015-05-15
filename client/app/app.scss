@@ -60,6 +60,22 @@ body {
   opacity: 0.75;
   margin: 8px;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  opacity: 0.9;
+  color: white;
+  background-color: $light-green;
+  padding-top: 5px;
+  width: 100%;
+
+  a {
+    display: table;
+    margin: 0 auto;
+    color: $pink;
+  }
+}
 // Component styles are injected through grunt
 // injector
 @import 'create/existing/existing.scss';
