@@ -8,6 +8,9 @@ $pink: #E75C83;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
+@import 'home/home.scss';
+@import 'create/existing/existing.scss';
+@import 'create/design/design.scss';
 
 /**
  * App-wide Styles
@@ -24,7 +27,6 @@ body {
   background-image: url('../assets/images/home/light_sprinkles.jpg');
   background-size: cover;
 }
-
 .custom-nav {
   margin: 0px;
   .navbar-brand {
@@ -62,6 +64,7 @@ body {
 }
 // Component styles are injected through grunt
 // injector
+@import 'create/design/design.scss';
 @import 'create/existing/existing.scss';
 @import 'home/home.scss';
 @import 'modal/modal.scss';

@@ -1,1 +1,22 @@
-<div>Design</div>
+<main class="design-container">	
+	<section class="left-half">
+		
+		canvas!!
+
+	</section>
+	<section class="right-half spacing section-style">
+		<h4> Pick a color for your cake-pop! </h4> 
+		<color-picker ng-model="myColor"
+		ng-model="color"
+		color-picker-format="rgb"
+		color-picker-swatch-pos="right"
+		color-picker-swatch-only="true">
+		</color-picker>
+		<br>
+		<button popover-template="dynamicPopoverSprinklers.templateUrl" popover-placement="right" class="btn btn-primary color-override">Add Sprinklers!</button>
+		<br><br>
+		<button popover-template="dynamicPopoverText.templateUrl" popover-placement="right" popover-title="{{dynamicPopoverText.title}}" class="btn btn-primary color-override">Add Text!</button>
+		<br><br>
+		<button popover-template="dynamicPopoverShapes.templateUrl" popover-placement="right"  class="btn btn-primary color-override"> Add Shapes! </button>
+	</section>
+</main>
