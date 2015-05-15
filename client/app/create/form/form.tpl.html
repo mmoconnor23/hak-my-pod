@@ -1,0 +1,24 @@
+<div id="request-form">
+  <div class="name">
+      <label>What's your name? </label>
+      <input type="text" ng-model="fullname" class="form-control">
+  </div>
+  <div class="text-group">
+      <label>Describe your idea: </label>
+      <textarea type="text" ng-model="idea" class="text-area"></textarea>
+    </div>
+  <div class="number-group">
+      <label>How many cake pops would you like? </label>
+      <input type="text" ng-model="numCakePops" class="form-control">
+    </div>
+  <div class="text-group">
+      <label>Contact Info: </label>
+      <textarea type="text" ng-model="contact" class="text-area"></textarea>
+    </div>
+  <button id="submit-button" type="button" ng-click="submit()">
+        Submit
+  </button>
+  <div>
+    <label ng-show="savedSuccessfully" style="background-color:red">Data Saved Successfully</label>
+  </div>
+</div>
