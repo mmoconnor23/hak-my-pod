@@ -1,8 +1,8 @@
-<h2 id="existing_designs">Choose an existing design</h2> 
-
-<div class="cakepop-main">
-   <div class="cakepop-image" ng-repeat="img in imageList">
-   		<img ng-src="{{img}}"></img>
-   </div>
-
-</div>
+<ul class="cakepop-main photo-grid">
+  <li class="cakepop-image" ng-repeat="img in imageList">
+	  <figure>
+	   		  <img ng-src="{{img.imageUrl}}"></img>
+	   		  <figcaption><p>{{img.imageName.toUpperCase()}}</p></figcaption>
+	  </figure>
+  </li>
+</ul>
