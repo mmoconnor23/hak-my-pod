@@ -1,19 +1,19 @@
 main {
     height: 100%;
     z-index: 2;
+    position: relative;
 }
+
 .left-half {
-	float: left;
     width: 60%;
     height: 100%;
+    padding: 32px;
 }
 .right-half {
-	padding-left: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	float: right;
 	width: 40%;
 	height: 100%;
+	margin-right: 25px;
 }
 .spacing {
 	padding-left: 5px;
@@ -24,9 +24,20 @@ main {
 .color-override {
  	background-color: $pink !important;
  	border-color: $pink !important;
+ 	opacity: 1.0 !important;
 }
+
 
 .align-left {
 	float: left !important;
 	text-align: left !important;
+}
+
+.section-style {
+	vertical-align: middle;
+	padding: 32px;
+	background-color: lightpink;
+	opacity: 0.9;
+ 	border-radius: 14px;
+ 	margin-right: 25px;
 }
