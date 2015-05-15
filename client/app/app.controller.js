@@ -5,7 +5,10 @@ angular.module('cakepopsApp')
     var vm = this;
 
     vm.openLink = function( siteString ) {
-      siteString === 'facebook' ?
-        $window.open('https://www.facebook.com/sweetbitesbyval') : $window.open('https://www.weebly.com');
-    }
+      if ( siteString === 'facebook' ){
+      	$window.open('https://www.facebook.com/sweetbitesbyval');
+      } else {
+      	$window.open('https://www.weebly.com');
+      }
+    };
   });

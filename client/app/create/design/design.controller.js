@@ -10,8 +10,10 @@ angular.module('cakepopsApp')
     };
     $scope.dynamicPopoverShapes = {
     templateUrl: 'app/create/design/PopoverTemplateShapes.html',
+    title: 'Choose a Shape!'
     };
-    $scope.dynamicPopoverSprinklers = {
-    templateUrl: 'app/create/design/PopoverTemplateSprinklers.html',   
-    }
+    $scope.dynamicPopoverSprinkles = {
+    templateUrl: 'app/create/design/PopoverTemplateSprinkles.html', 
+    title: 'Choose a color!'  
+    };
   });
