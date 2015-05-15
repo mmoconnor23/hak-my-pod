@@ -3,13 +3,39 @@
 angular.module('cakepopsApp')
   .controller('ExistingCtrl', function ($scope, $http) {
 
-   var imageList = ['batman.jpg', 'bow.jpg', 'choc_chip.jpg', 'crystal.jpg', 'cupcake.jpg', 'effiel_tower.jpg', 'fifty.jpg', 
-      'flower.jpg', 'football.jpg', 'fox.jpg', 'ghosts.jpg', 'girls.jpg', 'halloween.jpg', 'kiss.jpg', 'love.jpg', 
-      'love_2.jpg', 'micky.jpg', 'mouse.jpg', 'mouse_2.jpg', 'pig.jpg', 'rose.jpg', 'silly_mouse.jpg', 'snowflake.jpg', 
-      'snowman.jpg', 'top.jpg'];
+	var imageList = ['batman', 'bow', 'choc_chip', 'crystal', 'cupcake', 'eiffeltower', 'fifty', 
+	'flower', 'football', 'fox', 'ghosts', 'girls', 'halloween', 'kiss', 'love', 
+	'love_2', 'micky', 'mouse', 'mouse_2', 'pig', 'rose', 'silly_mouse', 'snowflake', 
+	'snowman', 'top'];
 
-   $scope.imageList = _.map(imageList, function(imageUrl) {
-    return 'assets/images/cakepop_images/' + imageUrl;
-   });
+  	var imageUrls = _.map(imageList, function(imageUrl) {
+		return 'assets/images/cakepop_images/' + imageUrl + '.jpg';
+   	});
+
+  	$scope.imageList = _.map(_.zip(imageUrls, imageList), function(image) {
+		return {
+			imageUrl: image[0],
+			imageName: image[1]
+		}
+  	});
+
+  	console.log($scope.imageList);
+
+   // 	$scope.imageList = _.zip(_.object(imageName: imageList), _.object(imageUrl: imageUrls));
+
+ //  	$scope.imageList = imageList
+
+	// $scope.imageList.imageNames = ['batman', 'bow', 'choc_chip', 'crystal', 'cupcake', 'effiel_tower', 'fifty', 
+ //      'flower', 'football', 'fox', 'ghosts', 'girls', 'halloween', 'kiss', 'love', 
+ //      'love_2', 'micky', 'mouse', 'mouse_2', 'pig', 'rose', 'silly_mouse', 'snowflake', 
+ //      'snowman', 'top'];
+
+
+
+   // $scope.imageList = _.map(imageList, function(imageUrl) {
+   //  return 'assets/images/cakepop_images/' + imageUrl + '.jpg';
+   // });
+
+   // $scope.fileNames = imageList;
 
   });
