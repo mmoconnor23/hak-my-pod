@@ -1,21 +1,51 @@
 <div ng-controller="HomeCtrl as ctrl">
-  <div class="pop-carousel">
-    <carousel interval="0">
-      <slide ng-repeat="slide in ctrl.slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto">
-        <div class="carousel-caption carousel-bar">
-          <h4>{{slide.title}}</h4>
-          <button type="button"
-                  class="btn btn-primary"
-                  ng-model="singleModel"
-                  btn-checkbox
-                  btn-checkbox-true="1"
-                  btn-checkbox-false="0"
-                  ui-sref="{{slide.link}}">
-            Go!
-          </button>
-        </div>
-      </slide>
-    </carousel>
+  <!--<div class="pop-carousel">-->
+    <!--<carousel interval="0">-->
+      <!--<slide ng-repeat="slide in ctrl.slides" active="slide.active">-->
+        <!--<img ng-src="{{slide.image}}" style="margin:auto">-->
+        <!--<div class="carousel-caption carousel-bar">-->
+          <!--<h4>{{slide.title}}</h4>-->
+          <!--<button type="button"-->
+                  <!--class="btn btn-primary"-->
+                  <!--ng-model="singleModel"-->
+                  <!--btn-checkbox-->
+                  <!--btn-checkbox-true="1"-->
+                  <!--btn-checkbox-false="0"-->
+                  <!--ui-sref="{{slide.link}}">-->
+            <!--Go!-->
+          <!--</button>-->
+        <!--</div>-->
+      <!--</slide>-->
+    <!--</carousel>-->
+  <!--</div>-->
+
+  <div class="pop-carousel carousel-bar">
+    <div class="pop-pic">
+      <img src="assets/images/home/sweet_bites_transparent.gif"/>
+    </div>
+    <div style="margin: 30px;">
+      <div class="col-md-6">
+        <button type="button"
+                class="btn btn-primary home-button"
+                ng-model="singleModel"
+                btn-checkbox
+                btn-checkbox-true="1"
+                btn-checkbox-false="0"
+                ui-sref="{{ctrl.slides[0].link}}">
+          <h4>{{ctrl.slides[0].title}}</h4>
+        </button>
+      </div>
+      <div class="col-md-6">
+        <button type="button"
+                class="btn btn-primary home-button"
+                ng-model="singleModel"
+                btn-checkbox
+                btn-checkbox-true="1"
+                btn-checkbox-false="0"
+                ui-sref="{{ctrl.slides[1].link}}">
+          <h4>{{ctrl.slides[1].title}}</h4>
+        </button>
+      </div>
+    </div>
   </div>
 </div>

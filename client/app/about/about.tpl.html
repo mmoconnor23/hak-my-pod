@@ -1,0 +1,13 @@
+<div ng-controller="AboutCtrl as ctrl">
+  <div class="row">
+    <div class="col-sm-6 col-md-4"
+         ng-repeat="pod in ctrl.hakMyPod">
+      <div class="thumbnail">
+        <img ng-src="{{pod.image}}">
+        <div class="caption">
+          <h3 style="color:#E75C83">{{pod.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

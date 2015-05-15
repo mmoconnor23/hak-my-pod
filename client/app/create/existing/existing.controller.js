@@ -1,12 +1,12 @@
-'use strict'; 
+'use strict';
 
 angular.module('cakepopsApp')
   .controller('ExistingCtrl', function ($scope) {
 
-	var imageList = ['batman', 'bow', 'choc_chip', 'crystal', 'cupcake', 'eiffeltower', 'fifty', 
-	'flower', 'football', 'fox', 'ghosts', 'girls', 'halloween', 'kiss', 'love', 
-	'love_2', 'micky', 'mouse', 'mouse_2', 'pig', 'rose', 'silly_mouse', 'snowflake', 
-	'snowman', 'top'];
+	var imageList = ['batman', 'bow', 'choc_chip', 'crystal', 'cupcake', 'eiffeltower', 'fifty',
+    'flower', 'football', 'fox', 'ghosts', 'girls', 'halloween', 'kiss', 'love',
+    'love_2', 'micky', 'mouse', 'mouse_2', 'pig', 'rose', 'silly_mouse', 'snowflake',
+    'snowman', 'top'];
 
   	var imageUrls = _.map(imageList, function(imageUrl) {
 		return 'assets/images/cakepop_images/' + imageUrl + '.jpg';
@@ -25,9 +25,9 @@ angular.module('cakepopsApp')
 
  //  	$scope.imageList = imageList
 
-	// $scope.imageList.imageNames = ['batman', 'bow', 'choc_chip', 'crystal', 'cupcake', 'effiel_tower', 'fifty', 
- //      'flower', 'football', 'fox', 'ghosts', 'girls', 'halloween', 'kiss', 'love', 
- //      'love_2', 'micky', 'mouse', 'mouse_2', 'pig', 'rose', 'silly_mouse', 'snowflake', 
+	// $scope.imageList.imageNames = ['batman', 'bow', 'choc_chip', 'crystal', 'cupcake', 'effiel_tower', 'fifty',
+ //      'flower', 'football', 'fox', 'ghosts', 'girls', 'halloween', 'kiss', 'love',
+ //      'love_2', 'micky', 'mouse', 'mouse_2', 'pig', 'rose', 'silly_mouse', 'snowflake',
  //      'snowman', 'top'];
 
 

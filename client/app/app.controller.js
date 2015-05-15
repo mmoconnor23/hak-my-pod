@@ -10,7 +10,7 @@ angular.module('cakepopsApp').controller('AppCtrl', function ( $window ) {
       if (siteString === 'facebook') {
          $window.open('https://www.facebook.com/sweetbitesbyval');
       } else {
-         $window.open('https://www.weebly.com');
+         $window.open('http://sweetbitesbyval.weebly.com/');
       }
 
     };
