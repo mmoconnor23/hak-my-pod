@@ -75,7 +75,7 @@
         function getRenderer() {
           var renderer = new threejs.WebGLRenderer();
 
-          renderer.setSize( window.innerWidth * 0.95, window.innerHeight * 0.95 );
+          renderer.setSize( window.innerWidth, window.innerHeight );
           renderer.setClearColor(0xffffff, 1);
           renderer.shadowMapEnabled = true;
           renderer.physicallyBasedShading = true;
@@ -94,7 +94,7 @@
           }
 
           if (activeRenderer) {
-            activeRenderer.setSize( window.innerWidth * 0.95, window.innerHeight * 0.95 );
+            activeRenderer.setSize( window.innerWidth, window.innerHeight );
           }
         }
 

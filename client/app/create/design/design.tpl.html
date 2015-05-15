@@ -1,11 +1,13 @@
-<main class="design-container">	
+<main class="design-container">
 	<section class="left-half">
-		
-		canvas!!
-
+    <cake-pop-viewer color="cakepop.color"
+                      cake-pop-sprinkles
+                      sprinkle-color="cakepop.sprinkles.color"
+                      sprinkle-count="cakepop.sprinkles.count">
+    </cake-pop-viewer>
 	</section>
 	<section class="right-half spacing section-style">
-		<h4> Pick a color for your cake-pop! </h4> 
+		<h4> Pick a color for your cake-pop! </h4>
 		<color-picker ng-model="myColor"
 		ng-model="color"
 		color-picker-format="rgb"
